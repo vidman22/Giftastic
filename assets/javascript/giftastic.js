@@ -23,12 +23,6 @@ function displayGif() {
 	
 	var gifDiv = $("<div class='gif'>");
 
-	var rating = results[i].rating;
-
-	var paraOne = $("<p>").text("Rating: " + rating);
-
-	gifDiv.append(paraOne);
-
 	var imgURL = $("<img>");
 
 	imgURL.attr("src", results[i].images.fixed_height_still.url);
@@ -39,10 +33,15 @@ function displayGif() {
 
 	imgURL.attr("data-state", "still");
 
-
 	gifDiv.append(imgURL);
 
 	imgURL.addClass("giffy");
+
+	var rating = results[i].rating;
+
+	var paraOne = $("<p>").text("Rating: " + rating);
+
+	gifDiv.append(paraOne);
 
 	$("#countries").prepend(gifDiv);
 
@@ -62,6 +61,8 @@ function renderButtons() {
 		var a = $("<button>");
 
 		a.addClass("gif");
+
+		a.addClass("btn")
 
 		a.attr("data-name", topics[i]);
 
