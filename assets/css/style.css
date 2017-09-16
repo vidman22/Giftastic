@@ -12,13 +12,25 @@ button {
 
 }
 
-
+.container {
+	max-width: 1080px;
+	
+}
 
 body {
 	background-color: #f1f8ff;
 	display: inline;
 }
 
+img.giffy {
+	margin: 10px;
+}
+
+p {
+	font-size: 18px;
+	font-family: Helvetica;
+	margin-left: 10px;
+}
 
 
 #countryButtons {
@@ -31,5 +43,9 @@ body {
 }
 
 #countries {
-	display: inline;
+	display: flex;
+	max-width: 100%;
+	flex-wrap: wrap;
+	float: left;
+
 }
