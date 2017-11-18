@@ -1,7 +1,9 @@
 
-
+// Array of topics
 var topics = ["United States", "Greece", "Italy", "Spain", "Russia", "Brazil", "Saudi Arabia", "South Africa", "Kazakhstan"];
 
+
+// display function
 function displayGif() {
 
 	var gif = $(this).attr("data-name");
@@ -47,8 +49,7 @@ function displayGif() {
 
 	}
 
-});
-	
+  });	
 
 }
 // loop through the array to add button attributes
@@ -62,7 +63,7 @@ function renderButtons() {
 
 		a.addClass("gif");
 
-		a.addClass("btn")
+		a.addClass("btn");
 
 		a.attr("data-name", topics[i]);
 
@@ -72,8 +73,7 @@ function renderButtons() {
 	}
 }
 
-
-
+// Add a new topic to the array
 $("#submit").on("click", function(event) {
 
 	event.preventDefault();
@@ -85,8 +85,8 @@ $("#submit").on("click", function(event) {
 
 
 });
-// Pause the gifs
 
+// Pause the gifs
 $(document).on("click", "img.giffy", function() {
 	
 	
@@ -104,7 +104,7 @@ $(document).on("click", "img.giffy", function() {
         
    });
 
-
+// display the gifs upon clicking the button
 $(document).on("click", "button", displayGif);
 
 // populate the buttons when you load the page
